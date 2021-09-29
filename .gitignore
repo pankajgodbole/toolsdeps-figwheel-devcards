@@ -1,0 +1,15 @@
+# dot directories
+.calva/
+.clj-kondo/
+.cljs_node_repl/
+.cpcache/
+.idea/
+.lsp/
+.vscode/
+
+# directories
+out/
+
+# files
+*.iml
+*.*~

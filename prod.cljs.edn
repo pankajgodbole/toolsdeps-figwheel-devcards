@@ -1,0 +1,14 @@
+#_(comment
+ :path        prod.cljs.edn
+ :description Used by Figwheel to configure the cljs compiler, and optionally,
+              figwheel itself as well
+ :reference   "https://cjohansen.no/tools-deps-figwheel-main-devcards-emacs"
+)
+
+{:main          toolsdeps-figwheel-devcards.core
+ :optimizations :advanced
+ :pretty-print  false
+ :source-map    "resources/public/js/prod.js.map"
+ :asset-path    "js/prod"
+ :output-to     "resources/public/js/prod.js"
+ :output-dir    "resources/public/js/prod"}
