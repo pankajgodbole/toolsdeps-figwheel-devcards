@@ -8,6 +8,7 @@
 .vscode/
 
 # directories
+node_modules/
 out/
 
 # files
