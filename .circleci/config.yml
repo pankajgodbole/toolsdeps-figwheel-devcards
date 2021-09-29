@@ -11,7 +11,7 @@ jobs:                                                                   # basic 
       - checkout                                                        # check out source code to working directory
       - restore_cache:                                                  # restores saved cache if checksum hasn't changed since the last run
           key: toolsdeps-figwheel-devcards-{{ checksum "deps.edn" }}
-      - run: clojure -P:test
+      - run: clojure -M:test
       - save_cache:                                                     # generate and store cache in the .m2 directory using a key template
           paths:
             - ~/.m2
