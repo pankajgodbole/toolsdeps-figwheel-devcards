@@ -1,0 +1,22 @@
+#_
+{
+ :name        dev.cljs.edn
+ :description Used by Figwheel to configure the cljs compiler, and optionally,
+              figwheel itself as well
+ :reference   "https://cjohansen.no/tools-deps-figwheel-main-devcards-emacs"
+ }
+
+^{:watch-dirs       ["src" "test" "devcards"]
+  :extra-main-files {:test     {:main toolsdeps-figwheel-devcards.test-runner}
+                     :devcards {:main toolsdeps-figwheel-devcards.cards}}}
+
+{:main              toolsdeps-figwheel-devcards.core
+ :devcards          true
+ :source-map        true
+ :asset-path        "js/dev"
+ :output-to         "resources/public/js/dev.js"
+ :output-dir        "resources/public/js/dev"
+ :optimizations     :none
+ :pretty-print      true
+ :closure-defines   {cljs-test-display.core/notifications false
+                     cljs-test-display.core/printing      false}}
